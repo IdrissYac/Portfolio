@@ -1,0 +1,7 @@
+- contact:
+       champ:
+         - nom: "Yacoubi Idriss"
+         - email: "idrissyacs@gmail.com"
+         - objet: "test"
+         - message: "test"
+      envoi_mail: true

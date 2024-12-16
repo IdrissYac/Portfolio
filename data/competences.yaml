@@ -1,0 +1,32 @@
+- domaine: "Développement"
+  competences:
+    - nom: "HTML"
+      niveau: 70
+    - nom: "CSS"
+      niveau: 70
+    - nom: "PHP"
+      niveau: 35
+    - nom: "JS"
+      niveau: 20
+- domaine: "Bureautique"
+  competences:
+    - nom: "Excel"
+      niveau: 90
+- domaine: "Réseau"
+  competences:
+    - nom: "Adresse IP"
+      niveau: 50
+    - nom: "Analyse de trames"
+      niveau: 60
+- domaine: "UI"
+  competences:
+    - nom: "Figma"
+      niveau: 35
+- domaine: "Langues"
+  competences:
+    - nom: "Anglais"
+      niveau: 90
+    - nom: "Français"
+      niveau: 100
+    - nom: "Arabe"
+      niveau: 50
