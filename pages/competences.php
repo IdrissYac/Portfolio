@@ -1,30 +1,43 @@
+<?php
+require 'vendor/autoload.php'; 
 
-<section id="competences">
-        <div class="accueil">
-            <?php
-            require_once("yaml/yaml.php");
+use Symfony\Component\Yaml\Yaml;
 
-            // Chargez les données du fichier YAML
-            $data = yaml_parse_file('data/competences.yaml');
 
-            // Affichez le contenu de $data pour vérifier
-
-// Affichage des informations
-foreach ($data as $domaine) {
-    echo $domaine["domaine"]. "<br>";
-    foreach ($domaine["competences"] as $competence){
-        echo "nom : " . $competence['nom'] . "<br>";
-        echo "Niveau : " . $competence['niveau'] . "<br>";  
-    }
-    
-    /*
-    echo "Nom : " . $competences['nom'] . "<br>";
-    echo "Niveau : " . $competences['niveau'] . "<br>";
-    echo "Date de début : " . $competences['date_debut'] . "<br>";
-    echo "Date de fin : " . $competences['date_fin'] . "<br>";
-    echo "Lieu : " . $competences['lieu'] . "<br>";
-    */
+try {
+    $contenu = Yaml::parseFile('data/competences.yaml');
+} catch (Exception $e) {
+    echo 'Erreur lors du chargement du fichier YAML: ',  $e->getMessage();
+    exit;
 }
+
+$utilisateur = $contenu['utilisateur'] ?? [];
+$competences = $utilisateur['competences'] ?? [];
 ?>
+
+<section id="page2" class="page page-competences">
+    <div class="container">
+        <div class="competences">
+            <h1>COMPÉTENCES</h1>
+            <?php
+               
+                foreach ($competences as $competence_domaine) {
+                   
+                    $domaine = htmlspecialchars($competence_domaine['domaine']);
+                    echo "<h2>$domaine</h2>";
+
+                   
+                    foreach ($competence_domaine['competences'] as $comp) {
+                        $compName = htmlspecialchars($comp['nom']);
+                        $niveau = (int)$comp['niveau']; 
+
+                        echo "<div class='skill'>";
+                        echo "<span class='skill-name'>$compName</span>";
+                        echo "<div class='progress-bar'><div class='progress' style='width: $niveau%;'></div></div>";
+                        echo "</div>";
+                    }
+                }
+            ?>
         </div>
-    </section>
+    </div>
+</section>

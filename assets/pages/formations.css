@@ -1,0 +1,227 @@
+/* Section Formations */
+.page-formations {
+    background-color: #BDBDBD;
+    color: #333;
+    padding: 60px 20px; /* Plus de padding pour un espace plus aéré */
+    text-align: center;
+    min-height: 100vh; /* Assure une hauteur minimale de 100% de la fenêtre */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Conteneur des formations */
+.formations-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Disposition flexible */
+    gap: 40px;
+    justify-items: center;
+    position: relative;
+}
+
+/* Cercles décoratifs */
+.circleF {
+    position: absolute;
+    background-color: #58b3c4;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+    opacity: 0.3;
+    border: 2px solid #666;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.circle-top-formations {
+    top: -60vh;
+    left: -15vw;
+    width: 50vw;
+    height: 50vw;
+}
+
+.circle-bottom-formations {
+    bottom: -60vh;
+    right: -15vw;
+    width: 50vw;
+    height: 50vw;
+}
+
+/* Titre des formations */
+.formations-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 50px;
+    margin-top: 2em;
+}
+
+/* Formation */
+.formation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 0.4vw 1vw rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    max-width: 320px;
+    position: relative;
+    z-index: 1;
+}
+
+.formation-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.formation-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.formation-icon:hover {
+    filter: grayscale(0%);
+}
+
+.formation-ecole {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+.formation-diplome {
+    font-size: 1.1em;
+    color: #58b3c4;
+    margin-top: 5px;
+}
+
+.formation-dates {
+    font-size: 1em;
+    color: #777;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.formation-lieu {
+    font-size: 1em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.formation-contenu {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 15px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.cv-link {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cv-button {
+    padding: 12px 25px;
+    background-color: #58b3c4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Animation de FadeIn pour les cercles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+
+/* Tablettes (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .formation-item {
+        width: calc(50% - 20px); /* 2 formations par ligne */
+    }
+}
+
+/* Mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+    .formation-item {
+        width: 80%; /* Formation occupe 80% de la largeur */
+    }
+
+    .circleF {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle-top-formations {
+        left: 20%;
+    }
+
+    .circle-bottom-formations {
+        right: 20%;
+    }
+}
+
+/* Mobiles très petits (max-width: 480px) */
+@media (max-width: 480px) {
+    .formation-item {
+        width: 100%; /* Formation occupe 100% de la largeur */
+    }
+
+    .circleF {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle-top-formations {
+        left: 30%;
+    }
+
+    .circle-bottom-formations {
+        right: 30%;
+    }
+}
+
+/* Adaptation pour un écran moyen (580px - 870px) */
+@media (min-width: 580px) and (max-width: 870px) {
+    .formations-container {
+        grid-template-columns: 1fr; /* Une seule formation par ligne */
+        gap: 20px;
+    }
+
+    .formation-item {
+        max-width: 100%;
+        padding: 20px 15px;
+    }
+
+    .formations-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+}

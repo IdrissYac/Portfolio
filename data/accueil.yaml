@@ -1,5 +1,6 @@
-prenom: Idriss
-nom: Yacoubi
-accroche: portfolio de idriss Yacoubi
-presentation: Voici mon portfolio 
-photo: photo.png
+utilisateur:
+  prenom: "Idriss"
+  nom: "YACOUBI"
+  sous_titre: "Apprenti Développeur"
+  image: ./assets/moi.png
+  description: "Je m'appelle Idriss YACOUBI, 19 ans, actuellement étudiant en BTS SIO à Caen, Sup Saint Ursule. Passionné par l'informatique, j'aime créer des solutions digitales innovantes et améliorer l'expérience utilisateur."

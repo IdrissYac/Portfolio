@@ -1,0 +1,214 @@
+/* Page Contact */
+.page-contact {
+    background-color: #333;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.contact-left {
+    flex: 1;
+    margin-right: 15px;
+    text-align: left;
+}
+
+.contact-title {
+    font-size: 1.8em;
+    color: #58b3c4; /* Couleur bleu-vert de votre site */
+    margin: 0;
+    text-align: center;
+}
+
+.contact-right {
+    flex: 1;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-size: 0.95em;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: #333;
+    color: #FFFFFF;
+    font-size: 0.9em;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 8px;
+    background-color: #58b3c4; /* Couleur bleu-vert de votre site */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #4a9ea1; /* Couleur légèrement plus foncée pour l'effet hover */
+}
+
+.form-group.rgpd {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #58b3c4; /* Couleur bleu-vert pour RGPD */
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    color: #FFFFFF;
+    gap: 10px;
+}
+
+.form-group.rgpd input[type="checkbox"] {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #58b3c4; /* Couleur bleu-vert pour la case à cocher */
+}
+
+.form-group.rgpd label {
+    font-size: 0.9em;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 1;
+}
+
+.form-group.rgpd label:hover {
+    text-decoration: underline;
+}
+
+/* Forme de cercle à l'arrière-plan */
+.circleC {
+    position: absolute;
+    background-color: #58b3c4;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease;
+}
+
+.circle-top-contact {
+    top: 10%;
+    left: 10%;
+}
+
+.circle-bottom-contact {
+    bottom: 15%;
+    right: 10%;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container-contact {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .contact-left {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-title {
+        font-size: 1.6em;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .circle-top-contact {
+        top: -10vh;
+        left: -20vw;
+        width: 80vw;
+        height: 80vw;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .circle-bottom-contact {
+        bottom: -10vh;
+        right: -20vw;
+        width: 80vw;
+        height: 80vw;
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-contact {
+        padding: 25px;
+    }
+
+    .contact-title {
+        font-size: 1.7em;
+    }
+
+    .contact-form {
+        max-width: 500px;
+    }
+
+    .circle-top-contact {
+        top: -10vh;
+        left: -20vw;
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .circle-bottom-contact {
+        bottom: -10vh;
+        right: -20vw;
+        width: 60vw;
+        height: 60vw;
+    }
+}

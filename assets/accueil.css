@@ -1,0 +1,289 @@
+/* Global */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    min-height: 100%;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #58b3c4;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 20%;
+    transition: width 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.hero .circle {
+    position: absolute;
+    background-color: #58b3c4;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease;
+}
+
+.hero .circle-top {
+    top: 10em;
+    left: 15%;
+}
+
+.hero .circle-bottom {
+    bottom: 10em;
+    right: 15%;
+}
+
+.hero-content {
+    margin-top: 30px;
+}
+
+.hero-content .first-name {
+    font-size: 4vw;
+    font-weight: 700;
+}
+
+.hero-content .last-name-container {
+    display: flex;
+    justify-content: center;
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.hero-content .last-name {
+    color: #58b3c4;
+}
+
+.hero-content .highlight {
+    color: white;
+}
+
+.hero .subtitle {
+    font-size: 2vw;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Conteneur de l'image et du texte */
+.hero-image-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+/* L'image prend toute la largeur et la hauteur du conteneur */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: opacity 0.6s ease-in-out; /* Animation de fondu de l'image */
+}
+
+/* Le texte est caché au départ avec opacity: 0 */
+.hero-image .presentation-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre pour le texte */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 20px;
+    opacity: 0; /* Texte caché au départ */
+    transition: opacity 0.6s ease-in-out; /* Animation de fondu pour l'apparition du texte */
+}
+
+/* Lorsque l'on survole le conteneur, on fait apparaître le texte */
+.hero-image-container:hover .presentation-text {
+    opacity: 1; /* Texte visible lors du survol */
+}
+
+/* On peut aussi ajouter une animation pour l'image si nécessaire */
+.hero-image-container:hover img {
+    opacity: 0.5; /* L'image devient un peu plus transparente lors du survol */
+}
+
+
+
+/* Hamburger */
+.hamburger {
+    display: none; /* Par défaut, caché */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 100; /* S'assurer qu'il est visible */
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animation lorsque le hamburger est activé */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navbar en mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Alignement horizontal */
+        justify-content: space-between; /* Espacement entre le logo et le hamburger */
+        padding: 15px 20px;
+    }
+
+    .hero-content .first-name {
+        font-size: 7vw;
+    }
+
+    .hero-content .last-name-container {
+        font-size: 5vw;
+    }
+
+    .hero .circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero .circle-top {
+        left: 10%;
+    }
+
+    .hero .circle-bottom {
+        right: 10%;
+    }
+
+    .hero .hero-image img {
+        max-width: 280px;
+        width: 80%;
+    }
+
+    /* Logo réduit pour mobile */
+    .navbar .logo {
+        max-width: 100px;
+    }
+
+    /* Afficher le hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Cacher le menu mobile par défaut */
+    #navbar {
+        display: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Afficher le menu mobile lorsque le hamburger est ouvert */
+    #navbar.open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navbar a {
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+}
+
+/* Résolution très petite pour mobile */
+@media (max-width: 480px) {
+    .hero-content .first-name {
+        font-size: 8vw;
+    }
+
+    .hero-content .last-name-container {
+        font-size: 6vw;
+    }
+
+    .hero .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero .hero-image img {
+        max-width: 220px;
+        width: 70%;
+    }
+
+    .navbar .logo {
+        max-width: 80px;
+    }
+}

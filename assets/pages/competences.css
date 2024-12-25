@@ -1,0 +1,120 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #58b3c4;
+}
+
+/* Compétences Section */
+.page-competences {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    color: #333;
+    text-align: center;
+    background-color: #BDBDBD;
+}
+
+.page-competences h1 {
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.competences {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.competences h2 {
+    font-size: 2vw;
+    color: #58b3c4;
+    margin-top: 40px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.skill-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    position: relative;
+    width: 80%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #58b3c4;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .competences h2 {
+        font-size: 4vw;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
+
+    .progress-bar {
+        width: 90%;
+    }
+
+    .circleComp {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .competences h2 {
+        font-size: 5vw;
+    }
+
+    .skill-name {
+        font-size: 0.9rem;
+    }
+
+    .progress-bar {
+        width: 95%;
+    }
+
+    .circleComp {
+        width: 60px;
+        height: 60px;
+    }
+}

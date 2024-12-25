@@ -1,0 +1,156 @@
+/* Section Réalisations */
+.page-realisations {
+    padding: 50px 0;
+    background-color: #333;
+    color: #f4f4f9;
+    position: relative;
+    height: 100vh;
+}
+
+.container-realisations {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Cercles décoratifs */
+.circleR {
+    position: absolute;
+    background-color: #58b3c4;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease;
+}
+
+.circle-top-realisations {
+    top: 10%;
+    left: 10%;
+}
+
+.circle-bottom-realisations {
+    bottom: 15%;
+    right: 10%;
+}
+
+/* Titre des réalisations */
+.realisations-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f4f4f9;
+    margin-bottom: 50px;
+    margin-top: 2em;
+}
+
+/* Conteneur des projets */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.project {
+    width: calc(33.333% - 20px);
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-image-container:hover .project-image {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-image-container:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.project-description {
+    padding: 20px;
+    font-size: 1rem;
+    color: #666;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 80%;
+    }
+
+    .circleR {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle-top-realisations {
+        left: 20%;
+    }
+
+    .circle-bottom-realisations {
+        right: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .realisations-title {
+        font-size: 2rem;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .circleR {
+        width: 100px;
+        height: 100px;
+    }
+}

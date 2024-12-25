@@ -1,0 +1,30 @@
+utilisateur:
+  formations:
+    - nom: "Bac Général option NSI et Anglais"
+      etablissement: "Lycée Malherbe"
+      logo: "logoMalherbe.jpg"
+      date_debut: "2022-09-01"
+      date_fin: "2023-06-30"
+      lieu: "Caen, France"
+      contenu: |
+        Formation axée sur les sciences informatiques et les langues. Le programme inclut des cours de programmation (Python, Java), de logique informatique, ainsi que d'anglais technique. Cette formation permet de développer des compétences en résolution de problèmes informatiques et en communication dans un environnement international.
+
+    - nom: "Licence Economie et gestion"
+      etablissement: "Université de Caen"
+      logo: "logoUnicaen.png"
+      date_debut: "2023-09-01"
+      date_fin: "2024-06-30"
+      lieu: "Caen, France"
+      contenu: |
+        Formation polyvalente en économie et gestion, avec des cours sur la microéconomie, la gestion d'entreprise, les statistiques et la comptabilité. L'accent est mis sur l'analyse des données économiques et la gestion des ressources d'une entreprise.
+
+    - nom: "BTS Services Informatiques aux Organisations"
+      etablissement: "CaenSup Saint-Ursule"
+      logo: "logoCaensup.jpeg"
+      date_debut: "2024-09-01"
+      date_fin: "2026-06-30"
+      lieu: "Caen, France"
+      contenu: |
+        Formation axée sur l'administration des réseaux et des systèmes, ainsi que sur le développement d'applications informatiques. Le programme couvre également la gestion de projets informatiques et la mise en place de solutions d'infrastructure pour les entreprises.
+
+  cv_pdf: "CV.pdf"
